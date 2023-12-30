@@ -11,7 +11,7 @@ The problem statement is to create a Streamlit application that allows users to 
 4.	 Option to select a channel name and migrate its data from the data lake to a SQL database as tables.
 5.	 Ability to search and retrieve data from the SQL database using different search options, including joining tables to get channel details.
 
-#Tools/Techonologies Used:
+Tools/Techonologies Used:
 1. MongoDB
 2. SQL
 3. Google API
