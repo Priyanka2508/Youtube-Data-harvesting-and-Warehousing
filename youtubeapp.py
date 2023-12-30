@@ -29,32 +29,19 @@ navigation,data=st.columns([1.6,4.55])
 with navigation:
 
     image = Image.open('youtube_logo.png')
-    st.image(image,use_column_width=True)
+    st.image(image,use_column_width= True)
 
 
     selected = option_menu('Main Menu', ['HOME',"YOUTUBE CHANNEL QUERY","DATABASE MIGRATION","CHANNEL INSIGHTS"],
                        icons=["house-fill",'youtube','box-arrow-in-up-right','bar-chart-fill'],default_index=0)#cloud-check##
-    url = requests.get("https://assets7.lottiefiles.com/packages/lf20_gggssfcj.json")
-    url_json = dict()
-    if url.status_code == 200:
-        url_json = url.json()
-    else:
-        print("Error in URL")
-    st_lottie(url_json,
-              reverse=False,
-              height=True,
-              width=True,
-              speed=1,
-              loop=True,
-              quality='high'
-              )
+
 with data:
-    st.markdown("<h1 style='text-align: left; color: #2d2e30;'>DATA HARVESTING AND WARHOUSING</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: left; color: #2d2e30;'> YOUTUBE DATA HARVESTING AND WARHOUSING</h1>", unsafe_allow_html=True)
 
 with data:
     if selected=='HOME':
         st.markdown('###  ***:red[YOUTUBE CHANNEL DATA ANALYSIS]***')
-        st.markdown("##### ***This application involves getting channel_Id from user as a input to fetch channel data such title,id,subscription,likes,dislikes, etc.. from YouTube using the YouTube API.Retrived data will be collected and stored in a NoSQL database.The channel data can be migrated to a MySQL database for further analysis and exploration.***")
+        st.markdown("##### ***This application has ability to input channel_Id and retrieves channel data such as Channel name, subscribers, total video count, playlist ID, video ID, likes, dislikes, comments from YouTube using the Google API.Retrived data will be collected and stored in a NoSQL database.The channel data can be migrated to a MySQL database for further analysis and exploration.***")
         st.markdown(' * Select a particular channel on youtube webpage *:blue[right click on mouse > view page resource]* click on **:blue[ctrl+f]** for find option there you will search for :blue[channelId] there you find like this - ***:blue[UCiEmtpFVJjpvdhsQ2QAhxVA]***')
 
 
